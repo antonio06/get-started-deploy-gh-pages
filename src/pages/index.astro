@@ -29,7 +29,12 @@ const date = (date: string) =>
           <li>
             <article class="post">
               <a
-                href={`/posts/${post.slug}`}
+                href={`${import.meta.env.BASE_URL}/posts/${post.slug
+                      .toLowerCase()
+                      .trim()
+                      .replace(/[^a-z0-9\s-]/g, '')
+                      .replace(/\s+/g, '-')}`}
+                    class="post__title"
               >
                 <Image
                   src={post.image.url}
