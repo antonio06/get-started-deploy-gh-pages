@@ -46,7 +46,7 @@ const date = (date: string) =>
                     <time datetime="2025-03-05">{date(post.date)}</time>
                   </p>
                   <a
-                    href={`/posts/${post.title
+                    href={`${import.meta.env.BASE_URL}/posts/${post.title
                       .toLowerCase()
                       .trim()
                       .replace(/[^a-z0-9\s-]/g, '')
