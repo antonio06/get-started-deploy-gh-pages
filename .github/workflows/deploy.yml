@@ -5,7 +5,7 @@ on:
     branches:
       - main
   repository_dispatch:
-  types: [deploy-from-content-island]
+    types: [deploy-from-content-island]
 
 permissions:
   pages: write
